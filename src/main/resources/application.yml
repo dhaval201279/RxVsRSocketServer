@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: rx-vs-rsocket-server
+
+  jackson:
+    property-naming-strategy: com.fasterxml.jackson.databind.PropertyNamingStrategy
+    default-property-inclusion: non_null
+    deserialization:
+      fail-on-unknown-properties: false
+
+  rsocket:
+    server:
+      port: 2131
+      transport: tcp
+
+  main:
+    lazy-initialization: true
+
+server:
+  port: 8091
+
+#logging:
+  #level:
+    #org:
+      #springframework: DEBUG
+    #web: DEBUG
+    #reactor:
+      #netty: DEBUG
